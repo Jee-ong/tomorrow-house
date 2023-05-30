@@ -1,7 +1,10 @@
-* {margin: 0; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box;}
+/*# sourceMappingURL=style.css.map */
 
-html {font-family: 'Noto Sans KR', sans-serif;}
-body {font-family: 'Noto Sans KR', sans-serif;}
+* {margin: 0; font-family: $font-main; box-sizing: border-box; -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;}
+
+html {font-family: $font-main; font-size: $font-size-16;}
+body {font-family: $font-main; color: $primary;}
 
 h1 {margin: 0;}
 
@@ -12,3 +15,4 @@ button, input, select, textarea {background-color: transparent; border: 0; &:foc
 a, button {cursor: pointer;}
 
 ul, ol {padding-left: 0; list-style: none;}
+ 
