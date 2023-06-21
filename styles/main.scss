@@ -4,6 +4,7 @@
 @import './constants/box-shadows';
 @import './constants/z-index.scss';
 @import './constants/dimensions';
+@import './constants/gird';
 
 @import './base/fonts';
 @import './base/normalize';
@@ -35,6 +36,7 @@
 @import './components/product-carousel';
 @import './components/product-info';
 @import './components/order-form';
+@import './components/checkout-card';
 
 @import './layouts/girds';
 @import './layouts/gnb';
