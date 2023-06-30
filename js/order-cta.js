@@ -15,4 +15,34 @@ function closeOrderModal() {
   orderModal.classList.remove('is-open')
   orderModalOverlay.classList.remove('is-active')
 }
+
 orderModalOverlay.addEventListener('click', closeOrderModal)
+
+function toggleOrderCtaBookmark() {
+  // 1. 버튼 is-active 추가
+  // 2. icon 클래스 변경 => ic_bookmark_filled
+  // 3. 카운드 숫자 값을 변경
+
+  const [icon, countSpan] = this.children
+  const count = Number(countSpan.innerHTML.replaceAll(',', ''))
+
+  let newCount = count
+
+  if (this.classList.contains('is-active')) {
+    // NOTE : 활성화가 된 상태이니 -> 비활성화 (ic_bookmark)
+    icon.classList.add('ic_bookmark')
+    icon.classList.remove('ic_bookmark_filled')
+    newCount = newCount - 1
+  } else {
+    // NOTE : 비활성화가 된 상태이니 -> 활성화 (ic_bookmark_filled)
+    icon.classList.add('ic_bookmark_filled')
+    icon.classList.remove('ic_bookmark')
+    newCount = newCount + 1
+  }
+
+  countSpan.innerHTML = newCount.toLocaleString()
+
+  this.classList.toggle('is-active')
+}
+
+orderCtaBookmarkButton.addEventListener('click', toggleOrderCtaBookmark)
